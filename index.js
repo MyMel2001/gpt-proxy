@@ -35,7 +35,7 @@ async function getBrowser() {
   if (!browser) {
     console.log('🚀 Launching headless Chromium...');
     browser = await puppeteer.launch({
-      headless: process.env.HEADLESS !== 'true',
+      headless: process.env.HEADLESS !== 'false',
       userDataDir: path.resolve(process.env.USER_DATA_DIR || './browser-profiles'),
       args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-blink-features=AutomationControlled'],
     });
