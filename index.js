@@ -16,7 +16,8 @@ const INACTIVITY_TIMEOUT = 5 * 60 * 1000; // 5 minutes
 const SITE_CONFIGS = {
   chatgpt: {
     url: 'https://chatgpt.com',
-    inputSelector: 'textarea#prompt-textarea',           // update if OpenAI changes UI
+    //inputSelector: 'textarea#prompt-textarea',           // needs update if OpenAI changes UI
+    inputSelector: 'textarea',
     sendSelector: '[data-testid="send-button"]',
   },
   gemini: {
