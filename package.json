@@ -1,0 +1,16 @@
+{
+  "name": "gpt-proxy",
+  "version": "1.0.0",
+  "description": "OpenAI-compatible proxy to ChatGPT / Gemini / Grok via headless Chromium + Ollama response extraction",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "puppeteer": "^23.0.0",
+    "dotenv": "^16.4.5",
+    "quick.db": "^9.1.0",
+    "cors": "^2.8.5"
+  }
+}
