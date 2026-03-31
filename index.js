@@ -69,6 +69,9 @@ function getSiteKey(model) {
   return null;
 }
 
+async function wait(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 // ====================== OPENAI COMPATIBLE ENDPOINTS ======================
 
 app.get('/v1/models', (req, res) => {
@@ -123,7 +126,7 @@ app.post('/v1/chat/completions', async (req, res) => {
     await page.waitForSelector('div[data-message-author-role="assistant"], .message-content, .prose', { timeout: 60000 });
 
     // Give the model time to finish generating
-    await page.waitForTimeout(120000);
+    await wait(120000);
 
     // === OLLAMA RESPONSE EXTRACTION (exactly as requested) ===
     // Grab the latest response container HTML
