@@ -111,11 +111,11 @@ app.post('/v1/chat/completions', async (req, res) => {
     const prompt = lastUserMessage.content;
 
     // Type into chat box
-    await page.waitForSelector(config.inputSelector, { timeout: 15000 });
+    await page.waitForSelector(config.inputSelector, { timeout: 65000 });
     await page.type(config.inputSelector, prompt, { delay: 30 });
 
     // Click send
-    await page.waitForSelector(config.sendSelector, { timeout: 10000 });
+    await page.waitForSelector(config.sendSelector, { timeout: 45000 });
     await page.click(config.sendSelector);
 
     // Wait for any response to appear
